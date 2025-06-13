@@ -99,3 +99,33 @@ You should see a file upload interface. Choose a file and click "Upload" to uplo
 - `S3Service.java`: The service responsible for interacting with AWS S3.
 - `S3Config.java`: Configuration class that sets up the S3 client using AWS credentials.
 - `application.properties`: Configuration file to set up AWS credentials and other application settings.
+
+
+
+--------------------------------------------------------------------
+
+# JWT Authentication with MySql
+
+This project implements a signup and login flow using JWT (JSON Web Tokens) for authentication. It connects to a mysql database to manage user roles and user data.
+
+## Requirements
+
+To run this project, you will need to set up a MongoDB cluster and configure the application. Follow the steps below:
+
+1. **Create a database in mysql
+   - connect your application with database connection
+
+2. **Insert Initial Documents into the `roles` Collection:**
+   - Insert the data into the `roles` 
+     ```
+     {"name":"ROLE_USER"}
+     {"name":"ROLE_ADMIN"}
+     {"name":"ROLE_MODERATOR"}
+     ```
+
+## Running the Project
+
+To run this project, use the following commands in your terminal or command prompt:
+```bash
+mvn install
+mvn spring-boot:run
