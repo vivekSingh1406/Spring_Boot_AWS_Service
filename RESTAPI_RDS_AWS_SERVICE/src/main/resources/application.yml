@@ -1,0 +1,17 @@
+# ✅ To connect with AWS RDS MySQL:
+# - Replace <rds-endpoint> with your RDS endpoint (e.g., mydb.abc123xyz.ap-south-1.rds.amazonaws.com)
+# - Replace <database-name> with your RDS database name
+# - Replace <username> and <password> with your RDS credentials
+# - Make sure port 3306 is open in your RDS security group
+
+spring:
+  datasource:
+    url: jdbc:mysql://<rds-endpoint>:3306/<database-name>
+    username: <username>
+    password: <password>
+    driver-class-name: com.mysql.cj.jdbc.Driver
+
+  jpa:
+    hibernate:
+      ddl-auto: update
+    show-sql: true
