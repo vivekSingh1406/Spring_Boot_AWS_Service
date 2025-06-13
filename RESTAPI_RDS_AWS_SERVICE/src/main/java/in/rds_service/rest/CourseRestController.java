@@ -1,4 +1,4 @@
-package in.ashokit.rest;
+package in.rds_service.rest;
 
 import java.util.List;
 
@@ -13,8 +13,8 @@ import org.springframework.web.bind.annotation.PutMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RestController;
 
-import in.ashokit.binding.Course;
-import in.ashokit.service.CourseService;
+import in.rds_service.binding.Course;
+import in.rds_service.service.CourseService;
 
 @RestController
 public class CourseRestController {

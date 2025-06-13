@@ -1,8 +1,8 @@
-package in.ashokit.service;
+package in.rds_service.service;
 
 import java.util.List;
 
-import in.ashokit.binding.Course;
+import in.rds_service.binding.Course;
 
 public interface CourseService {
 

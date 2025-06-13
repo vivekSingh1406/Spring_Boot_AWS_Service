@@ -1,4 +1,4 @@
-package in.ashokit.service;
+package in.rds_service.service;
 
 import java.util.List;
 import java.util.Optional;
@@ -6,8 +6,8 @@ import java.util.Optional;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
-import in.ashokit.binding.Course;
-import in.ashokit.repo.CourseRepository;
+import in.rds_service.binding.Course;
+import in.rds_service.repo.CourseRepository;
 
 @Service
 public class CourseServiceImpl implements CourseService {
