@@ -45,15 +45,12 @@ You need to provide your AWS credentials and bucket information to the applicati
 # AWS S3 Configuration
 cloud.aws.credentials.access-key=your-access-key-id
 cloud.aws.credentials.secret-key=your-secret-key
-cloud.aws.region.static=your-region
-cloud.aws.s3.bucket-name=your-bucket-name
 ```
 
 Replace the values with:
 - `your-access-key-id`: Your AWS Access Key.
 - `your-secret-key`: Your AWS Secret Key.
 - `your-region`: The AWS region where your S3 bucket is located (e.g., `us-east-1`).
-- `your-bucket-name`: The name of your S3 bucket.
 
 ### 4. Build the Project
 
