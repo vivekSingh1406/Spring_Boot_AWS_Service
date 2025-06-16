@@ -14,14 +14,7 @@ This project demonstrates how to upload files directly to Amazon S3 using a Spri
 
 ## Project Setup
 
-### 1. Clone the Repository
-Clone the project to your local machine:
-```bash
-git clone https://github.com/rihabalyasiri/s3-spring-boot.git
-cd s3-spring-boot
-```
-
-### 2. Set Up AWS S3
+### 1. Set Up AWS S3
 1. **Create an S3 Bucket**:
     - Log in to your [AWS Management Console](https://aws.amazon.com/console/).
     - Navigate to **S3** and create a new bucket.
@@ -31,15 +24,10 @@ cd s3-spring-boot
     - Create an IAM user with `AmazonS3FullAccess` permissions or a custom policy that allows uploading files to S3.
     - Obtain the **AWS Access Key ID** and **AWS Secret Access Key** for the IAM user.
 
-   You can also configure the credentials using the AWS CLI:
-   ```bash
-   aws configure
-   ```
-
-### 3. Configure the Project
+### 2. Configure the Project
 You need to provide your AWS credentials and bucket information to the application. You can do this by modifying the `application.properties` file.
 
-#### 3.1 Open `src/main/resources/application.properties` and configure it as follows:
+#### 2.1 Open `src/main/resources/application.properties` and configure it as follows:
 
 ```properties
 # AWS S3 Configuration
@@ -52,18 +40,7 @@ Replace the values with:
 - `your-secret-key`: Your AWS Secret Key.
 - `your-region`: The AWS region where your S3 bucket is located (e.g., `us-east-1`).
 
-### 4. Build the Project
-
-Use Gradle to build the project.
-
-#### Gradle
-```bash
-./gradlew build
-```
-
-### 5. Run the Project
-
-You can now run the project using the following command:
+### 3. Run the Project
 
 #### Maven
 ```bash
@@ -74,28 +51,6 @@ mvn spring-boot:run
 ```bash
 ./gradlew bootRun
 ```
-
-### 6. Access the Application
-
-Once the application is running, open your browser and navigate to:
-```
-http://localhost:8080/
-```
-
-You should see a file upload interface. Choose a file and click "Upload" to upload the file to your configured S3 bucket.
-
-## Testing the File Upload
-1. Open your browser and go to `http://localhost:8080/`.
-2. Select a file to upload using the form.
-3. After uploading, the file will be stored in your S3 bucket.
-4. Check your S3 bucket to verify that the file has been uploaded.
-
-## Project Structure
-
-- `S3Controller.java`: The controller that handles file upload requests.
-- `S3Service.java`: The service responsible for interacting with AWS S3.
-- `S3Config.java`: Configuration class that sets up the S3 client using AWS credentials.
-- `application.properties`: Configuration file to set up AWS credentials and other application settings.
 
 
 
