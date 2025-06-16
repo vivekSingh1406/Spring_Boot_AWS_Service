@@ -25,11 +25,7 @@ public class BucketService {
 
 	private Logger logger = LogManager.getLogger(this.getClass().getName());
 
-	/**
-	 * Method will download file from S3 and will push content to CloudWatch Logs
-	 * 
-	 * @param fileName
-	 */
+
 	public void downloadFile(String fileName, AmazonS3 amazonS3,String bucketName) {
 		try {
 			logger.info("File to be fetched from S3 {}", fileName);
@@ -49,23 +45,10 @@ public class BucketService {
 
 	}
 
-	/**
-	 * Calls FileStore.java class to create bucket on AWS S3
-	 * 
-	 * @param bucketName
-	 * @return
-	 */
 	public String createBucket(String bucketName) {
 		return fileStore.createBucket(bucketName);
 	}
 
-	/**
-	 * Calls FileStore.java upload file on AWS S3, first validates file is empty if
-	 * then throw Excepiton
-	 * 
-	 * @param file
-	 * @return
-	 */
 	public String uploadFile(MultipartFile file, String bucketName) {
 		if (file.isEmpty()) {
 			throw new IllegalStateException("Cannot upload empty file");

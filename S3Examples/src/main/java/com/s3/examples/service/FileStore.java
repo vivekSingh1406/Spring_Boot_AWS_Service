@@ -11,12 +11,6 @@ import org.springframework.web.multipart.MultipartFile;
 import com.amazonaws.services.s3.AmazonS3;
 import com.amazonaws.services.s3.model.AmazonS3Exception;
 
-/**
- * Actual class that communicates with S3 to create bucket and upload file
- * 
- * @author Naresh Makhija
- *
- */
 @Service
 public class FileStore {
 
@@ -28,9 +22,6 @@ public class FileStore {
 
 	/**
 	 * Validates that credentials are valid and bucket already exist or not
-	 * 
-	 * @param bucketName
-	 * @return
 	 */
 	public String createBucket(String bucketName) {
 		logger.info("Inside method createBucket");
@@ -47,9 +38,6 @@ public class FileStore {
 
 	/**
 	 * Method validates that bucket already exists or not
-	 * 
-	 * @param bucketName
-	 * @return
 	 */
 	private boolean bucketAlreadyExists(String bucketName) {
 		logger.info("Inside method bucketAlreadyExists");
@@ -58,9 +46,6 @@ public class FileStore {
 
 	/**
 	 * Method that upload file on S3 Bucket
-	 * 
-	 * @param multiPart
-	 * @throws Exception
 	 */
 	public void uploadFiletoBucket(MultipartFile multiPart,String bucketName) throws Exception {
 		logger.info("Inside method upload");
