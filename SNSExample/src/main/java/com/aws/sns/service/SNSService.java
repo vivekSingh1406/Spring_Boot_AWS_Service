@@ -1,6 +1,4 @@
-package com.example.aws.sns.service;
-
-import java.time.LocalDateTime;
+package com.aws.sns.service;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Value;
@@ -18,12 +16,6 @@ public class SNSService {
 	@Value("${topic.arn}")
 	private String topicARN;
 
-	/**
-	 * Method that publish message SNS
-	 * 
-	 * @param message
-	 * @param topicArn
-	 */
 	public void pubTopic(String subject, String message) {
 
 		try {

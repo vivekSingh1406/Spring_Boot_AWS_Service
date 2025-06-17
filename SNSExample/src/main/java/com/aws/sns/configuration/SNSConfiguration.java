@@ -1,4 +1,4 @@
-package com.example.aws.sns.configuration;
+package com.aws.sns.configuration;
 
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.context.annotation.Bean;
@@ -26,9 +26,8 @@ public class SNSConfiguration {
 
 	@Bean
 	public AmazonSNS amazonSNS() {
-		AmazonSNS sns = AmazonSNSClientBuilder.standard()
+		return AmazonSNSClientBuilder.standard()
 				.withCredentials(new AWSStaticCredentialsProvider(credentials())).withRegion(Regions.AP_SOUTH_1)
 				.build();
-		return sns;
 	}
 }
