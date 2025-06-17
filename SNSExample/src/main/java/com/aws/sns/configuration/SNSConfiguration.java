@@ -20,8 +20,7 @@ public class SNSConfiguration {
 	private String secretKey;
 
 	public AWSCredentials credentials() {
-		AWSCredentials credentials = new BasicAWSCredentials(accessKey, secretKey);
-		return credentials;
+        return new BasicAWSCredentials(accessKey, secretKey);
 	}
 
 	@Bean

@@ -18,32 +18,8 @@ import com.amazonaws.util.IOUtils;
 @Service
 public class BucketService {
 
-
-
 	@Autowired
 	private FileStore fileStore;
-
-	private Logger logger = LogManager.getLogger(this.getClass().getName());
-
-
-	public void downloadFile(String fileName, AmazonS3 amazonS3,String bucketName) {
-		try {
-			logger.info("File to be fetched from S3 {}", fileName);
-			S3Object s3Object = amazonS3.getObject(bucketName, fileName);
-
-			InputStream objectContent = s3Object.getObjectContent();
-
-			String content = IOUtils.toString(objectContent);
-			// String content = convertInputStreamToString(objectContent);
-			logger.info("Content {}", content);
-
-		} catch (IOException e) {
-			logger.error("Error in reading file content {}", e.getMessage());
-		} catch (AmazonS3Exception s3Exception) {
-			logger.error("Some error occured", s3Exception.getMessage());
-		}
-
-	}
 
 	public String createBucket(String bucketName) {
 		return fileStore.createBucket(bucketName);

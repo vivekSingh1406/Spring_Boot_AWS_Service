@@ -19,7 +19,6 @@ public class FileStore {
 	@Autowired
 	private AmazonS3 amazonS3;
 
-
 	/**
 	 * Validates that credentials are valid and bucket already exist or not
 	 */
